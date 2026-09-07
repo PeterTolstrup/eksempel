@@ -1,11 +1,21 @@
 ---
 import { Image } from "astro:assets";
 
-const {img, headline, text} = Astro.props;
+const { img, headline, text } = Astro.props;
 ---
 
 <article>
-  <Image src={img} alt=`Billede af ${headline}` width="200"/>
+  <Image src={img} alt=`Billede af ${headline}` width="200" />
   <h3>{headline}</h3>
   <p>{text}</p>
 </article>
+
+<style>
+  article {
+    margin: 2rem;
+    background-color: aquamarine;
+  }
+  p {
+    margin-bottom: 3rem;
+  }
+</style>
